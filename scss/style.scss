@@ -4,12 +4,29 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+
+    /* iOS Safari */
+    -webkit-touch-callout: none;
+    /* Safari */
+    -webkit-user-select: none;
+    /* Konqueror HTML */
+    -khtml-user-select: none;
+    /* Firefox */
+    -moz-user-select: none;
+    /* Internet Explorer/Edge */
+    -ms-user-select: none;
+    /* Non-prefixed version, currently supported by Chrome and Opera */
+    user-select: none;
 }
 
 main {
     flex: 1 0 auto;
 }
 
-.pagestyle{
-    @extend .green, .lighten-1; 
+.pagestyle {
+    @extend .green, .lighten-1;
+}
+
+.carousel .carousel-item {
+    width: 100%;
 }
