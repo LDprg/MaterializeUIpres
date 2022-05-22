@@ -3,3 +3,6 @@ css
 
 *.css
 *.map
+
+# vscode
+.vscode
