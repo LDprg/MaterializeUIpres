@@ -1,2 +1,2 @@
 # MaterializeUIpres
-A Presentation with Materialise UI for Materialise UI
+A Presentation with Materialize UI for Materialize UI
