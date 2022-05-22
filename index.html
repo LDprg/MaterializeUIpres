@@ -32,6 +32,7 @@
                     <li class="tab"><a href="#page1">1. Seite</a></li>
                     <li class="tab"><a href="#page2">2. Seite</a></li>
                     <li class="tab"><a href="#page3">3. Seite</a></li>
+                    <li class="tab"><a href="#page4">4. Seite</a></li>
                 </ul>
             </div>
         </div>
@@ -62,6 +63,11 @@
                 Test2
             </div>
         </div>
+        <div id="page4" class="col s12">
+            <div class="container">
+                Test3
+            </div>
+        </div>
     </main>
 
     <footer class="page-footer pagestyle">
@@ -89,8 +95,10 @@
     <script>
         // Presentation key script
         var counter = 1;    // default page
-        const max = 3;      // last page
+        const max = 4;      // last page
         const min = 1;      // first page
+
+        M.Tabs.getInstance($(".tabs")).select("page" + counter);
 
         $(document).keydown(function (e) {
             switch (e.which) {
