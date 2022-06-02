@@ -49,8 +49,8 @@
                     <li class="tab"><a href="#page2">Init</a></li>
                     <li class="tab"><a href="#page3">Layout 1</a></li>
                     <li class="tab"><a href="#page4">Layout 2</a></li>
-                    <li class="tab"><a href="#page5">Video</a></li>
-                    <li class="tab"><a href="#page6">Layout 2</a></li>
+                    <li class="tab"><a href="#page5">Diverses</a></li>
+                    <li class="tab"><a href="#page6">?????</a></li>
                 </ul>
             </div>
         </div>
@@ -82,7 +82,7 @@
                 <pre><code class="language-html"><xmp><link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection"/>
 <script type="text/javascript" src="js/bin/materialize.min.js"></script></xmp></code></pre>
 
-                Jetzt muss man nur javascript initsialisieren (nur wenn Navbars und animations benötigt):
+                Jetzt muss man nur das Javascript initsialisieren (nur wenn Navbars und animations benötigt):
                 <pre><code class="language-js">M.AutoInit();</code></pre>
             </div>
         </div>
@@ -116,31 +116,31 @@
                 </div>
                 <table class="striped">
                     <thead>
-                      <tr>
-                          <th>Name</th>
-                          <th>Item Name</th>
-                          <th>Item Price</th>
-                      </tr>
+                        <tr>
+                            <th>Name</th>
+                            <th>Item Name</th>
+                            <th>Item Price</th>
+                        </tr>
                     </thead>
-            
+
                     <tbody>
-                      <tr>
-                        <td>Alvin</td>
-                        <td>Eclair</td>
-                        <td>$0.87</td>
-                      </tr>
-                      <tr>
-                        <td>Alan</td>
-                        <td>Jellybean</td>
-                        <td>$3.76</td>
-                      </tr>
-                      <tr>
-                        <td>Jonathan</td>
-                        <td>Lollipop</td>
-                        <td>$7.00</td>
-                      </tr>
+                        <tr>
+                            <td>Alvin</td>
+                            <td>Eclair</td>
+                            <td>$0.87</td>
+                        </tr>
+                        <tr>
+                            <td>Alan</td>
+                            <td>Jellybean</td>
+                            <td>$3.76</td>
+                        </tr>
+                        <tr>
+                            <td>Jonathan</td>
+                            <td>Lollipop</td>
+                            <td>$7.00</td>
+                        </tr>
                     </tbody>
-                  </table>
+                </table>
             </div>
         </div>
         <div id="page4" class="col s12">
@@ -165,7 +165,55 @@
                 </div>
             </div>
         </div>
-        <div id="page5" class="col s12"></div>
+        <div id="page5" class="col s12">
+            <div class="container">
+                <h1>Pulsierende Buttons</h1>
+                <div class="row center">
+                    <div class="col s4"><a class="btn-floating pulse"><i class="material-icons">menu</i></a></div>
+                    <div class="col s4"><a class="btn-floating btn-large pulse"><i class="material-icons">cloud</i></a>
+                    </div>
+                    <div class="col s4"><a class="btn-floating btn-large cyan pulse"><i
+                                class="material-icons">edit</i></a></div>
+                </div>
+
+                <h1>Toasts</h1>
+                <div class="row center">
+                    <div class="col s4"><a onclick="M.toast({html: 'I am a toast'})" class="btn">Toast!</a></div>
+                    <div class="col s4"><a onclick="M.toast({html: 'I am a toast', classes: 'rounded'})"
+                            class="btn">Round Toast!</a></div>
+                    <div class="col s4"><a
+                            onclick="M.toast({html: '<span>I am toast content</span><button class=\'btn-flat toast-action\'>Undo</button>'})"
+                            class="btn">Toast in Action!</a></div>
+                </div>
+
+                <h1>Tooltips</h1>
+                <div class="row center">
+                    <div class="col s3"><a class="btn tooltipped" data-html="true" data-position="bottom"
+                            data-tooltip="I am a tooltip">Bottom</a></div>
+                    <div class="col s3"><a class="btn tooltipped" data-position="top" data-tooltip="I am a tooltip">
+                            Top</a></div>
+                    <div class="col s3"><a class="btn tooltipped" data-position="left" data-tooltip="I am a tooltip">
+                            Left</a></div>
+                    <div class="col s3"><a class="btn tooltipped" data-position="right" data-tooltip="I am a tooltip">
+                            Right</a></div>
+                </div>
+                <h1>Modals</h1>
+
+                <!-- Modal Trigger -->                
+                <div class="center"><a class="waves-effect waves-light btn modal-trigger center" href="#modal1">Modal</a></div>
+
+                <!-- Modal Structure -->
+                <div id="modal1" class="modal">
+                    <div class="modal-content">
+                    <h4>Modal Header</h4>
+                    <p>A bunch of text</p>
+                    </div>
+                    <div class="modal-footer">
+                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div id="page6" class="col s12"></div>
     </main>
 
@@ -184,8 +232,8 @@
         $(".tabs").tabs({
             swipeable: true
         });
-
-        $(".tabs-content").css('height', '700px');
+        
+        $(".tabs-content").css('height', $("main").height()-1);
 
         // Custom INIT
         toggleContainer();
@@ -193,6 +241,7 @@
 
         // fix window rescaling bugs
         $(window).on('resize', function () {
+            $(".tabs-content").css('height', $("main").height());
             setTimeout(function () {
                 M.Tabs.getInstance($(".tabs")).updateTabIndicator();
             }, 1000);
