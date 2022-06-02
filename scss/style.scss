@@ -19,10 +19,22 @@ body {
     user-select: none;
 }
 
-main {
+main {    
+    font-size: 150%;
     flex: 1 0 auto;
 }
 
 .pagestyle {
     @extend .green, .lighten-1;
+}
+
+.secondstyle {
+    border: 2px solid #eee;
+    background-color: tomato;
+    color: white;
+    @extend .center;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }

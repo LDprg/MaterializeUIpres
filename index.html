@@ -10,9 +10,25 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <!-- <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection" /> -->
     <link ype="text/css" rel="stylesheet" href="css/style.css" />
+    <link href="css/prism.css" rel="stylesheet" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script type="text/javascript" src="js/bin/materialize.min.js"></script>
+    <script src="js/prism.js"></script>
+
+    <script>
+        function toggleContainer() {
+            if ($(".switch").hasClass("container")) {
+                $(".switch").removeClass("container");
+                $(".switch").text("No Container (Click Me)");
+            }
+            else {
+                $(".switch").addClass("container");
+                $(".switch").text("Container (Click Me)");
+            }
+
+        }
+    </script>
 </head>
 
 <body class="grey lighten-3">
@@ -29,10 +45,12 @@
             </div>
             <div class="nav-content">
                 <ul class="tabs tabs-transparent">
-                    <li class="tab"><a href="#page1">1. Seite</a></li>
-                    <li class="tab"><a href="#page2">2. Seite</a></li>
-                    <li class="tab"><a href="#page3">3. Seite</a></li>
-                    <li class="tab"><a href="#page4">4. Seite</a></li>
+                    <li class="tab"><a href="#page1">Home</a></li>
+                    <li class="tab"><a href="#page2">Init</a></li>
+                    <li class="tab"><a href="#page3">Layout 1</a></li>
+                    <li class="tab"><a href="#page4">Layout 2</a></li>
+                    <li class="tab"><a href="#page5">Video</a></li>
+                    <li class="tab"><a href="#page6">Layout 2</a></li>
                 </ul>
             </div>
         </div>
@@ -46,28 +64,109 @@
 
     <main>
         <div id="page1" class="col s12">
-            <div class="container">
-                <div class="center">
-                    <h1>Materialize CSS</h1>
-                    Eine Präsenation von Lukas Datler und David Hronek
-                </div>
+            <div class="container center">
+                <h1>Materialize CSS</h1>
+
+                Eine Präsenation von Lukas Datler und David Hronek
+
             </div>
         </div>
         <div id="page2" class="col s12">
-            <div class="container">
-                TEST1
+            <div class="container center">
+                <h1>Wie includiere ich Materialize?</h1>
+
+                Hinzufügen von Materialize ist einfach!
+                <br>
+                Folgende Zeilen müssen in der index.html eingefügt werden:
+
+                <pre><code class="language-html"><xmp><link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection"/>
+<script type="text/javascript" src="js/bin/materialize.min.js"></script></xmp></code></pre>
+
+                Jetzt muss man nur javascript initsialisieren (nur wenn Navbars und animations benötigt):
+                <pre><code class="language-js">M.AutoInit();</code></pre>
             </div>
         </div>
         <div id="page3" class="col s12">
-            <div class="container">
-                Test2
+            <div class="container center">
+                <h1>Layout 1</h1>
+                <div class="pagestyle hoverable" onclick="toggleContainer()">
+                    <div class="secondstyle switch"></div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col s12 secondstyle">Tabellen</div>
+                    <div class="col s1 secondstyle">1</div>
+                    <div class="col s1 secondstyle">2</div>
+                    <div class="col s1 secondstyle">3</div>
+                    <div class="col s1 secondstyle">4</div>
+                    <div class="col s1 secondstyle">5</div>
+                    <div class="col s1 secondstyle">6</div>
+                    <div class="col s1 secondstyle">7</div>
+                    <div class="col s1 secondstyle">8</div>
+                    <div class="col s1 secondstyle">9</div>
+                    <div class="col s1 secondstyle">10</div>
+                    <div class="col s1 secondstyle">11</div>
+                    <div class="col s1 secondstyle">12</div>
+                    <div class="col s12 secondstyle">13</div>
+                    <div class="col s6 secondstyle">14</div>
+                    <div class="col s6 secondstyle">15</div>
+                    <div class="col s2 secondstyle">16</div>
+                    <div class="col s2 secondstyle">17</div>
+                    <div class="col s8 secondstyle">18</div>
+                </div>
+                <table class="striped">
+                    <thead>
+                      <tr>
+                          <th>Name</th>
+                          <th>Item Name</th>
+                          <th>Item Price</th>
+                      </tr>
+                    </thead>
+            
+                    <tbody>
+                      <tr>
+                        <td>Alvin</td>
+                        <td>Eclair</td>
+                        <td>$0.87</td>
+                      </tr>
+                      <tr>
+                        <td>Alan</td>
+                        <td>Jellybean</td>
+                        <td>$3.76</td>
+                      </tr>
+                      <tr>
+                        <td>Jonathan</td>
+                        <td>Lollipop</td>
+                        <td>$7.00</td>
+                      </tr>
+                    </tbody>
+                  </table>
             </div>
         </div>
         <div id="page4" class="col s12">
             <div class="container">
-                Test3
+                <h1>Layout 2</h1>
+                <div>
+                    <div class="divider"></div>
+                    <div class="section">
+                        <h4>Section 1</h4>
+                        Stuff
+                    </div>
+                    <div class="divider"></div>
+                    <div class="section">
+                        <h4>Section 2</h4>
+                        Stuff
+                    </div>
+                    <div class="divider"></div>
+                    <div class="section">
+                        <h4>Section 3</h4>
+                        Stuff
+                    </div>
+                </div>
             </div>
         </div>
+        <div id="page5" class="col s12"></div>
+        <div id="page6" class="col s12"></div>
     </main>
 
     <footer class="page-footer pagestyle">
@@ -85,17 +184,23 @@
         $(".tabs").tabs({
             swipeable: true
         });
-    </script>
-    <script>
+
+        $(".tabs-content").css('height', '700px');
+
+        // Custom INIT
+        toggleContainer();
+
+
         // fix window rescaling bugs
-        $(window).on('resize', function(){
-            M.Tabs.getInstance($(".tabs")).updateTabIndicator();
+        $(window).on('resize', function () {
+            setTimeout(function () {
+                M.Tabs.getInstance($(".tabs")).updateTabIndicator();
+            }, 1000);
         });
-    </script>
-    <script>
+
         // Presentation key script
         var counter = 1;    // default page
-        const max = 4;      // last page
+        const max = 6;      // last page
         const min = 1;      // first page
 
         M.Tabs.getInstance($(".tabs")).select("page" + counter);
@@ -124,6 +229,7 @@
             M.Tabs.getInstance($(".tabs")).select("page" + counter);
         });
     </script>
+    <script src="prism.js"></script>
 </body>
 
 </html>
