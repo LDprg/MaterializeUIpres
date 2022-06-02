@@ -69,6 +69,11 @@
 
                 Eine Präsenation von Lukas Datler und David Hronek
 
+                <br>
+                <br>
+
+                <img class="responsive-img" src="img/materialize.png" alt="Materialize logo" style="object-fit:contain; width:500px; height:400px;">
+
             </div>
         </div>
         <div id="page2" class="col s12">
@@ -199,17 +204,18 @@
                 </div>
                 <h1>Modals</h1>
 
-                <!-- Modal Trigger -->                
-                <div class="center"><a class="waves-effect waves-light btn modal-trigger center" href="#modal1">Modal</a></div>
+                <!-- Modal Trigger -->
+                <div class="center"><a class="waves-effect waves-light btn modal-trigger center"
+                        href="#modal1">Modal</a></div>
 
                 <!-- Modal Structure -->
                 <div id="modal1" class="modal">
                     <div class="modal-content">
-                    <h4>Modal Header</h4>
-                    <p>A bunch of text</p>
+                        <h4>Modal Header</h4>
+                        <p>A bunch of text</p>
                     </div>
                     <div class="modal-footer">
-                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+                        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
                     </div>
                 </div>
             </div>
@@ -232,8 +238,8 @@
         $(".tabs").tabs({
             swipeable: true
         });
-        
-        $(".tabs-content").css('height', $("main").height()-1);
+
+        $(".tabs-content").css('height', $("main").height() - 1);
 
         // Custom INIT
         toggleContainer();
