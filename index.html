@@ -16,6 +16,9 @@
     <script type="text/javascript" src="js/bin/materialize.min.js"></script>
     <script src="js/prism.js"></script>
 
+    <!-- icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
+
     <script>
         function toggleContainer() {
             if ($(".switch").hasClass("container")) {
@@ -50,7 +53,8 @@
                     <li class="tab"><a href="#page3">Layout 1</a></li>
                     <li class="tab"><a href="#page4">Layout 2</a></li>
                     <li class="tab"><a href="#page5">Diverses</a></li>
-                    <li class="tab"><a href="#page6">About</a></li>
+                    <li class="tab"><a href="#page6">Icons</a></li>
+                    <li class="tab"><a href="#page7">About</a></li>
                 </ul>
             </div>
         </div>
@@ -221,7 +225,30 @@
                 </div>
             </div>
         </div>
+
         <div id="page6" class="col s12">
+            <div class="container">
+
+                <div id="page6.1">
+                    1
+                </div>
+                <div id="page6.2">
+                    2
+                </div>
+
+                <ul class="pagination">
+                    <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+                    <li class="active"><a href="#page6.1">1</a></li>
+                    <li class="waves-effect"><a href="#page6.2">2</a></li>
+                    <li class="waves-effect"><a href="#!">3</a></li>
+                    <li class="waves-effect"><a href="#!">4</a></li>
+                    <li class="waves-effect"><a href="#!">5</a></li>
+                    <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+                  </ul>
+            </div>
+        </div>
+
+        <div id="page7" class="col s12">
             <div class="container">
                 <h1>Die Entwickler</h1>
                 <img class="circle responsive-img" src="img/materialize_team.jpeg">
@@ -275,7 +302,7 @@
 
         // Presentation key script
         var counter = 1;    // default page
-        const max = 6;      // last page
+        const max = 7;      // last page
         const min = 1;      // first page
 
         M.Tabs.getInstance($(".tabs")).select("page" + counter);
