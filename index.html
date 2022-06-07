@@ -53,7 +53,7 @@
                     <li class="tab"><a href="#page3">Layout 1</a></li>
                     <li class="tab"><a href="#page4">Layout 2</a></li>
                     <li class="tab"><a href="#page5">Diverses</a></li>
-                    <li class="tab"><a href="#page6">Icons</a></li>
+                    <li class="tab"><a href="#page6">Slider/Icons</a></li>
                     <li class="tab"><a href="#page7">About</a></li>
                 </ul>
             </div>
@@ -91,7 +91,7 @@
                 <pre><code class="language-html"><xmp><link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection"/>
 <script type="text/javascript" src="js/bin/materialize.min.js"></script></xmp></code></pre>
 
-                Jetzt muss man nur das Javascript initsialisieren (nur wenn Navbars und animations benötigt):
+                Jetzt muss man nur das Javascript initialisieren (nur wenn Navbars und animations benötigt):
                 <pre><code class="language-js">M.AutoInit();</code></pre>
             </div>
         </div>
@@ -228,44 +228,45 @@
 
         <div id="page6" class="col s12">
             <div class="container">
-
-                <div id="page6.1">
-                    1
-                </div>
-                <div id="page6.2">
-                    2
-                </div>
-
-                <ul class="pagination">
-                    <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-                    <li class="active"><a href="#page6.1">1</a></li>
-                    <li class="waves-effect"><a href="#page6.2">2</a></li>
-                    <li class="waves-effect"><a href="#!">3</a></li>
-                    <li class="waves-effect"><a href="#!">4</a></li>
-                    <li class="waves-effect"><a href="#!">5</a></li>
-                    <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
-                  </ul>
+                <h1>Slider with Icons</h1>
+                
+                <div class="slider">
+                    <ul class="slides">
+                      <li>
+                        <div class="caption center-align">
+                          <h3>This is a tiny shield.</h3>
+                          <i class="tiny material-icons">security</i>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="caption left-align">
+                          <h3>This is a small shield on the left side.</h3>
+                          <i class="small material-icons">security</i>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="caption right-align">
+                          <h3>This is a medium shield on the right side.</h3>
+                          <i class="medium material-icons">security</i>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="caption center-align">
+                          <h3>This is a large shield.</h3>
+                          <i class="large material-icons">security</i>
+                        </div>
+                      </li>
+                    </ul>
+                </div>                
             </div>
         </div>
 
         <div id="page7" class="col s12">
             <div class="container">
                 <h1>Die Entwickler</h1>
-                <img class="circle responsive-img" src="img/materialize_team.jpeg">
+                <img class="circle responsive-img materialboxed" src="img/materialize_team.jpeg">
 
-                <div class="col s12"><blockquote>We are a team of students from Carnegie Mellon University.</blockquote></div>
-
-                <div class="col s3"><img class="circle responsive-img" src="img/Alan.png"></div>
-                <div class="col s3"><img class="circle responsive-img" src="img/alex.png"></div>
-                <div class="col s3"><img class="circle responsive-img" src="img/alvin.png"></div>
-                <div class="col s3"><img class="circle responsive-img" src="img/kevin.png"></div>
-
-                <div class="col s3">Alan Chang</div>
-                <div class="col s3">Alex Mark</div>
-                <div class="col s3">Alvin Wang</div>
-                <div class="col s3">Kevin Louie</div>
-
-                
+                <div class="col s12"><blockquote>We are a team of students from Carnegie Mellon University.</blockquote></div>                
             </div>
         </div>
     </main>
