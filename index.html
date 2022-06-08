@@ -53,8 +53,9 @@
                     <li class="tab"><a href="#page3">Layout 1</a></li>
                     <li class="tab"><a href="#page4">Layout 2</a></li>
                     <li class="tab"><a href="#page5">Diverses</a></li>
-                    <li class="tab"><a href="#page6">Slider/Icons</a></li>
-                    <li class="tab"><a href="#page7">About</a></li>
+                    <li class="tab"><a href="#page6">Slider</a></li>
+                    <li class="tab"><a href="#page7">Pagination</a></li>
+                    <li class="tab"><a href="#page8">About</a></li>
                 </ul>
             </div>
         </div>
@@ -228,7 +229,7 @@
 
         <div id="page6" class="col s12">
             <div class="container">
-                <h1>Slider with Icons</h1>
+                <h1>Slider</h1>
                 
                 <div class="slider">
                     <ul class="slides">
@@ -262,6 +263,36 @@
         </div>
 
         <div id="page7" class="col s12">
+            <div class="container">
+                <h1>Pagination</h1>
+
+                <ul class="pagination">
+                    <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+                    <li class="active"><a href="#!">1</a></li>
+                    <li class="waves-effect"><a href="#!">2</a></li>
+                    <li class="waves-effect"><a href="#!">3</a></li>
+                    <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+                </ul>   
+                
+                <ul class="pagination">
+                    <li class="waves-effect"><a href="#!"><i class="material-icons">arrow_back</i></a></li>
+                    <li class="waves-effect"><a href="#!">1</a></li>
+                    <li class="active"><a href="#!">2</a></li>
+                    <li class="waves-effect"><a href="#!">3</a></li>
+                    <li class="waves-effect"><a href="#!"><i class="material-icons">arrow_forward</i></a></li>
+                </ul> 
+
+                <ul class="pagination">
+                    <li class="waves-effect"><a href="#!"><i class="material-icons">fast_rewind</i></a></li>
+                    <li class="waves-effect"><a href="#!">1</a></li>
+                    <li class="waves-effect"><a href="#!">2</a></li>
+                    <li class="active"><a href="#!">3</a></li>
+                    <li class="disabled"><a href="#!"><i class="material-icons">fast_forward</i></a></li>
+                </ul> 
+            </div>
+        </div>
+
+        <div id="page8" class="col s12">
             <div class="container">
                 <h1>Die Entwickler</h1>
                 <img class="circle responsive-img materialboxed" src="img/materialize_team.jpeg">
@@ -303,7 +334,7 @@
 
         // Presentation key script
         var counter = 1;    // default page
-        const max = 7;      // last page
+        const max = 8;      // last page
         const min = 1;      // first page
 
         M.Tabs.getInstance($(".tabs")).select("page" + counter);
