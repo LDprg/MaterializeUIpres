@@ -92,7 +92,7 @@
                 <pre><code class="language-html"><xmp><link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection"/>
 <script type="text/javascript" src="js/bin/materialize.min.js"></script></xmp></code></pre>
 
-                Jetzt muss man nur das Javascript initialisieren (nur wenn Navbars und animations benötigt):
+                Jetzt muss man nur das Javascript initialisieren (Benötigt bei animierten Sachen! Achtung manchmal muss eine Funktion explizit initialisiert werden!):
                 <pre><code class="language-js">M.AutoInit();</code></pre>
 
                 <div class="container center">Zentrierte Container werden so erstellt:</div>
@@ -333,12 +333,12 @@
         // Custom INIT
         toggleContainer();
 
-
         // fix window rescaling bugs
         $(window).on('resize', function () {
             $(".tabs-content").css('height', $("main").height() - 1);
             setTimeout(function () {
                 M.Tabs.getInstance($(".tabs")).updateTabIndicator();
+                $(".tabs-content").css('height', $("main").height() - 1);
             }, 1000);
         });
 
