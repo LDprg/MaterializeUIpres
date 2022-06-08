@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Matrialize UI</title>
 
@@ -17,19 +17,17 @@
     <script src="js/prism.js"></script>
 
     <!-- icons -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
     <script>
         function toggleContainer() {
             if ($(".switch").hasClass("container")) {
                 $(".switch").removeClass("container");
                 $(".switch").text("No Container (Click Me)");
-            }
-            else {
+            } else {
                 $(".switch").addClass("container");
                 $(".switch").text("Container (Click Me)");
             }
-
         }
     </script>
 </head>
@@ -41,9 +39,15 @@
                 <a href="" class="brand-logo">Materialize</a>
                 <a href="" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="https://materializecss.com/">Materialize CSS Website</a></li>
-                    <li><a href="https://github.com/Dogfalo/materialize">Materialize CSS Github</a></li>
-                    <li><a href="https://github.com/LDprg/MaterializeUIpres">This Website Github</a></li>
+                    <li>
+                        <a href="https://materializecss.com/">Materialize CSS Website</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/Dogfalo/materialize">Materialize CSS Github</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/LDprg/MaterializeUIpres">This Website Github</a>
+                    </li>
                 </ul>
             </div>
             <div class="nav-content">
@@ -52,10 +56,13 @@
                     <li class="tab"><a href="#page2">Init</a></li>
                     <li class="tab"><a href="#page3">Layout 1</a></li>
                     <li class="tab"><a href="#page4">Layout 2</a></li>
-                    <li class="tab"><a href="#page5">Diverses</a></li>
-                    <li class="tab"><a href="#page6">Slider</a></li>
-                    <li class="tab"><a href="#page7">Pagination</a></li>
-                    <li class="tab"><a href="#page8">About</a></li>
+                    <li class="tab"><a href="#page5">Diverses 1</a></li>
+                    <li class="tab"><a href="#page6">Diverses 2</a></li>
+                    <li class="tab"><a href="#page7">Diverses 3</a></li>
+                    <li class="tab"><a href="#page8">Picker</a></li>
+                    <li class="tab"><a href="#page9">Slider</a></li>
+                    <li class="tab"><a href="#page10">Textinputs</a></li>
+                    <li class="tab"><a href="#page11">About</a></li>
                 </ul>
             </div>
         </div>
@@ -63,8 +70,12 @@
 
     <ul class="sidenav" id="mobile-demo">
         <li><a href="https://materializecss.com/">Materialize CSS Website</a></li>
-        <li><a href="https://github.com/Dogfalo/materialize">Materialize CSS Github</a></li>
-        <li><a href="https://github.com/LDprg/MaterializeUIpres">This Website Github</a></li>
+        <li>
+            <a href="https://github.com/Dogfalo/materialize">Materialize CSS Github</a>
+        </li>
+        <li>
+            <a href="https://github.com/LDprg/MaterializeUIpres">This Website Github</a>
+        </li>
     </ul>
 
     <main>
@@ -74,11 +85,11 @@
 
                 Eine Präsenation von Lukas Datler und David Hronek
 
-                <br>
-                <br>
+                <br />
+                <br />
 
-                <img class="responsive-img" src="img/materialize.png" alt="Materialize logo" style="object-fit:contain; width:500px; height:400px;">
-
+                <img class="responsive-img" src="img/materialize.png" alt="Materialize logo"
+                    style="object-fit: contain; width: 500px; height: 400px" />
             </div>
         </div>
         <div id="page2" class="col s12">
@@ -86,16 +97,20 @@
                 <h1>Wie inkludiere ich Materialize?</h1>
 
                 Hinzufügen von Materialize ist einfach!
-                <br>
+                <br />
                 Folgende Zeilen müssen in der index.html eingefügt werden:
 
                 <pre><code class="language-html"><xmp><link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection"/>
 <script type="text/javascript" src="js/bin/materialize.min.js"></script></xmp></code></pre>
 
-                Jetzt muss man nur das Javascript initialisieren (Benötigt bei animierten Sachen! Achtung manchmal muss eine Funktion explizit initialisiert werden!):
+                Jetzt muss man nur das Javascript initialisieren (Benötigt bei
+                animierten Sachen! Achtung manchmal muss eine Funktion explizit
+                initialisiert werden!):
                 <pre><code class="language-js">M.AutoInit();</code></pre>
 
-                <div class="container center">Zentrierte Container werden so erstellt:</div>
+                <div class="container center">
+                    Zentrierte Container werden so erstellt:
+                </div>
                 <pre><code class="language-html"><xmp><div class="container center">Zentrierte Container werden so erstellt:</div></xmp></code></pre>
             </div>
         </div>
@@ -106,7 +121,7 @@
                 <div class="pagestyle hoverable" onclick="toggleContainer()">
                     <div class="secondstyle switch"></div>
                 </div>
-                <br>
+                <br />
                 <div class="row">
                     <div class="col s12 secondstyle">Layout</div>
                     <div class="col s1 secondstyle">1</div>
@@ -183,39 +198,56 @@
             <div class="container">
                 <h1>Pulsierende Buttons</h1>
                 <div class="row center">
-                    <div class="col s4"><a class="btn-floating pulse"><i class="material-icons">menu</i></a></div>
-                    <div class="col s4"><a class="btn-floating btn-large pulse"><i class="material-icons">cloud</i></a>
+                    <div class="col s4">
+                        <a class="btn-floating pulse"><i class="material-icons">menu</i></a>
                     </div>
-                    <div class="col s4"><a class="btn-floating btn-large cyan pulse"><i
-                                class="material-icons">edit</i></a></div>
+                    <div class="col s4">
+                        <a class="btn-floating btn-large pulse"><i class="material-icons">cloud</i></a>
+                    </div>
+                    <div class="col s4">
+                        <a class="btn-floating btn-large cyan pulse"><i class="material-icons">edit</i></a>
+                    </div>
                 </div>
 
                 <h1>Toasts</h1>
                 <div class="row center">
-                    <div class="col s4"><a onclick="M.toast({html: 'I am a toast'})" class="btn">Toast!</a></div>
-                    <div class="col s4"><a onclick="M.toast({html: 'I am a toast', classes: 'rounded'})"
-                            class="btn">Round Toast!</a></div>
-                    <div class="col s4"><a
-                            onclick="M.toast({html: '<span>I am toast content</span><button class=\'btn-flat toast-action\'>Undo</button>'})"
-                            class="btn">Toast in Action!</a></div>
+                    <div class="col s4">
+                        <a onclick="M.toast({html: 'I am a toast'})" class="btn">Toast!</a>
+                    </div>
+                    <div class="col s4">
+                        <a onclick="M.toast({html: 'I am a toast', classes: 'rounded'})" class="btn">Round Toast!</a>
+                    </div>
+                    <div class="col s4">
+                        <a onclick="M.toast({html: '<span>I am toast content</span><button class=\'btn-flat toast-action\'>Undo</button>'})"
+                            class="btn">Toast in Action!</a>
+                    </div>
                 </div>
 
                 <h1>Tooltips</h1>
                 <div class="row center">
-                    <div class="col s3"><a class="btn tooltipped" data-html="true" data-position="bottom"
-                            data-tooltip="I am a tooltip">Bottom</a></div>
-                    <div class="col s3"><a class="btn tooltipped" data-position="top" data-tooltip="I am a tooltip">
-                            Top</a></div>
-                    <div class="col s3"><a class="btn tooltipped" data-position="left" data-tooltip="I am a tooltip">
-                            Left</a></div>
-                    <div class="col s3"><a class="btn tooltipped" data-position="right" data-tooltip="I am a tooltip">
-                            Right</a></div>
+                    <div class="col s3">
+                        <a class="btn tooltipped" data-html="true" data-position="bottom"
+                            data-tooltip="I am a tooltip">Bottom</a>
+                    </div>
+                    <div class="col s3">
+                        <a class="btn tooltipped" data-position="top" data-tooltip="I am a tooltip">
+                            Top</a>
+                    </div>
+                    <div class="col s3">
+                        <a class="btn tooltipped" data-position="left" data-tooltip="I am a tooltip">
+                            Left</a>
+                    </div>
+                    <div class="col s3">
+                        <a class="btn tooltipped" data-position="right" data-tooltip="I am a tooltip">
+                            Right</a>
+                    </div>
                 </div>
                 <h1>Modals</h1>
 
                 <!-- Modal Trigger -->
-                <div class="center"><a class="waves-effect waves-light btn modal-trigger center"
-                        href="#modal1">Modal</a></div>
+                <div class="center">
+                    <a class="waves-effect waves-light btn modal-trigger center" href="#modal1">Modal</a>
+                </div>
 
                 <!-- Modal Structure -->
                 <div id="modal1" class="modal">
@@ -232,75 +264,220 @@
 
         <div id="page6" class="col s12">
             <div class="container">
-                <h1>Slider</h1>
-                
-                <div class="slider">
-                    <ul class="slides">
-                      <li>
-                        <div class="caption center-align">
-                          <h3>This is a tiny shield.</h3>
-                          <i class="tiny material-icons">security</i>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="caption left-align">
-                          <h3>This is a small shield on the left side.</h3>
-                          <i class="small material-icons">security</i>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="caption right-align">
-                          <h3>This is a medium shield on the right side.</h3>
-                          <i class="medium material-icons">security</i>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="caption center-align">
-                          <h3>This is a large shield.</h3>
-                          <i class="large material-icons">security</i>
-                        </div>
-                      </li>
-                    </ul>
-                </div>                
+                <h1>Autocompleted Chips</h1>
+                <div class="chips chips-autocomplete"></div>
+
+                <h1>Dropdown Menus</h1>
+                <div class="input-field col s12">
+                    <select multiple>
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                    </select>
+                    <label>Materialize Multiple Select</label>
+                </div>
+
+                <div class="input-field col s12">
+                    <select>
+                        <optgroup label="team 1">
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                        </optgroup>
+                        <optgroup label="team 2">
+                            <option value="3">Option 3</option>
+                            <option value="4">Option 4</option>
+                        </optgroup>
+                    </select>
+                    <label>Optgroups</label>
+                </div>
             </div>
         </div>
 
         <div id="page7" class="col s12">
             <div class="container">
+                <!-- <h1>Switches</h1>
+          <div class="switch">
+            <label>
+              Off
+              <input type="checkbox" />
+              <span class="lever"></span>
+              On
+            </label>
+          </div>
+
+          <div class="switch">
+            <label>
+              Off
+              <input disabled type="checkbox" />
+              <span class="lever"></span>
+              On
+            </label>
+          </div> -->
+
+                <h1>RadioButtons</h1>
+                <form action="#">
+                    <p>
+                        <label>
+                            <input name="group1" type="radio" checked />
+                            <span>Red</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input name="group1" type="radio" />
+                            <span>Yellow</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input class="with-gap" name="group1" type="radio" />
+                            <span>Green</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input name="group1" type="radio" disabled="disabled" />
+                            <span>Brown</span>
+                        </label>
+                    </p>
+                </form>
                 <h1>Pagination</h1>
+                <div class="center">
+                    <ul class="pagination">
+                        <li class="disabled">
+                            <a href="#!"><i class="material-icons">chevron_left</i></a>
+                        </li>
+                        <li class="active"><a href="#!">1</a></li>
+                        <li class="waves-effect"><a href="#!">2</a></li>
+                        <li class="waves-effect"><a href="#!">3</a></li>
+                        <li class="waves-effect">
+                            <a href="#!"><i class="material-icons">chevron_right</i></a>
+                        </li>
+                    </ul>
 
-                <ul class="pagination">
-                    <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-                    <li class="active"><a href="#!">1</a></li>
-                    <li class="waves-effect"><a href="#!">2</a></li>
-                    <li class="waves-effect"><a href="#!">3</a></li>
-                    <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
-                </ul>   
-                
-                <ul class="pagination">
-                    <li class="waves-effect"><a href="#!"><i class="material-icons">arrow_back</i></a></li>
-                    <li class="waves-effect"><a href="#!">1</a></li>
-                    <li class="active"><a href="#!">2</a></li>
-                    <li class="waves-effect"><a href="#!">3</a></li>
-                    <li class="waves-effect"><a href="#!"><i class="material-icons">arrow_forward</i></a></li>
-                </ul> 
+                    <ul class="pagination">
+                        <li class="waves-effect">
+                            <a href="#!"><i class="material-icons">arrow_back</i></a>
+                        </li>
+                        <li class="waves-effect"><a href="#!">1</a></li>
+                        <li class="active"><a href="#!">2</a></li>
+                        <li class="waves-effect"><a href="#!">3</a></li>
+                        <li class="waves-effect">
+                            <a href="#!"><i class="material-icons">arrow_forward</i></a>
+                        </li>
+                    </ul>
 
-                <ul class="pagination">
-                    <li class="waves-effect"><a href="#!"><i class="material-icons">fast_rewind</i></a></li>
-                    <li class="waves-effect"><a href="#!">1</a></li>
-                    <li class="waves-effect"><a href="#!">2</a></li>
-                    <li class="active"><a href="#!">3</a></li>
-                    <li class="disabled"><a href="#!"><i class="material-icons">fast_forward</i></a></li>
-                </ul> 
+                    <ul class="pagination">
+                        <li class="waves-effect">
+                            <a href="#!"><i class="material-icons">fast_rewind</i></a>
+                        </li>
+                        <li class="waves-effect"><a href="#!">1</a></li>
+                        <li class="waves-effect"><a href="#!">2</a></li>
+                        <li class="active"><a href="#!">3</a></li>
+                        <li class="disabled">
+                            <a href="#!"><i class="material-icons">fast_forward</i></a>
+                        </li>
+                    </ul>
+                </div>
+
             </div>
         </div>
 
         <div id="page8" class="col s12">
             <div class="container">
-                <h1>Die Entwickler</h1>
-                <img class="circle responsive-img materialboxed" src="img/materialize_team.jpeg">
+                <h1>Datum</h1>
+                <input type="text" class="datepicker" />
 
-                <div class="col s12"><blockquote>We are a team of students from Carnegie Mellon University.</blockquote></div>                
+                <h1>Uhrzeit</h1>
+                <input type="text" class="timepicker" />
+            </div>
+        </div>
+
+        <div id="page9" class="col s12">
+            <div class="container">
+                <h1>Slider</h1>
+
+                <div class="slider">
+                    <ul class="slides">
+                        <li>
+                            <div class="caption center-align">
+                                <h3>This is a tiny shield.</h3>
+                                <i class="tiny material-icons">security</i>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="caption left-align">
+                                <h3>This is a small shield on the left side.</h3>
+                                <i class="small material-icons">security</i>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="caption right-align">
+                                <h3>This is a medium shield on the right side.</h3>
+                                <i class="medium material-icons">security</i>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="caption center-align">
+                                <h3>This is a large shield.</h3>
+                                <i class="large material-icons">security</i>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="page10" class="col s12">
+            <div class="container">
+                <h1>Anmeldung</h1>
+                <div class="row">
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+                                <label for="first_name">First Name</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input id="last_name" type="text" class="validate">
+                                <label for="last_name">Last Name</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input disabled value="I am not editable" id="disabled" type="text" class="validate">
+                                <label for="disabled">Disabled</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="password" type="password" class="validate">
+                                <label for="password">Password</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="email" type="email" class="validate">
+                                <label for="email">Email</label>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div id="page11" class="col s12">
+            <div class="container">
+                <h1>Die Entwickler</h1>
+                <img class="circle responsive-img materialboxed" src="img/materialize_team.jpeg" />
+
+                <div class="col s12">
+                    <blockquote>
+                        We are a team of students from Carnegie Mellon University.
+                    </blockquote>
+                </div>
             </div>
         </div>
     </main>
@@ -318,61 +495,83 @@
         // Materialize INIT
         M.AutoInit();
         $(".tabs").tabs({
-            swipeable: true
+            swipeable: true,
         });
 
-        $(document).ready(function(){
-            $('.slider').slider({
+        $(document).ready(function () {
+            $(".datepicker").datepicker();
+        });
+        $(document).ready(function () {
+            $(".timepicker").timepicker();
+        });
+
+        $('.chips-autocomplete').chips({
+            autocompleteOptions: {
+                data: {
+                    'HTL': null,
+                    'Schule': null,
+                    'Mödling': null,
+                    'Ausbildung': null
+                },
+                limit: Infinity,
+                minLength: 1
+            }
+        });
+        $(document).ready(function () {
+            $('select').formSelect();
+        });
+
+        //slider
+        $(document).ready(function () {
+            $(".slider").slider({
                 duration: 400,
                 interval: 2000,
             });
         });
 
-        $(".tabs-content").css('height', $("main").height() - 1);
+        $(".tabs-content").css("height", $("main").height() - 1);
 
         // Custom INIT
         toggleContainer();
 
         // fix window rescaling bugs
-        $(window).on('resize', function () {
-            $(".tabs-content").css('height', $("main").height() - 1);
+        $(window).on("resize", function () {
+            $(".tabs-content").css("height", $("main").height() - 1);
             setTimeout(function () {
                 M.Tabs.getInstance($(".tabs")).updateTabIndicator();
-                $(".tabs-content").css('height', $("main").height() - 1);
+                $(".tabs-content").css("height", $("main").height() - 1);
             }, 1000);
         });
 
         // Presentation key script
-        var counter = 1;    // default page
-        const max = 8;      // last page
-        const min = 1;      // first page
+        var counter = 1; // default page
+        const max = 11; // last page
+        const min = 1; // first page
 
         for (let index = counter; index <= max; index++) {
-            $("#page" + index).css('overflow', 'auto');
+            $("#page" + index).css("overflow", "auto");
         }
 
         M.Tabs.getInstance($(".tabs")).select("page" + counter);
 
         $(document).keydown(function (e) {
             switch (e.which) {
-                case 32:    // space key
-                case 38:    // up arrow key
-                case 39:    // right arrow key
-                case 13:    // enter key
+                case 32: // space key
+                case 38: // up arrow key
+                case 39: // right arrow key
+                case 13: // enter key
                     counter++;
                     break;
-                case 46:    // enf key
-                case 37:    // left arrow key
-                case 40:    // bottom arrow key
-                case 8:     // backspace key
+                case 46: // enf key
+                case 37: // left arrow key
+                case 40: // bottom arrow key
+                case 8: // backspace key
                     counter--;
                     break;
             }
 
-            if (counter > max)
-                counter = max;
-            if (counter < min)
-                counter = min;
+            if (counter > max) counter = max;
+            if (counter < min) counter = min;
 
             M.Tabs.getInstance($(".tabs")).select("page" + counter);
         });
