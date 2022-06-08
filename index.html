@@ -296,6 +296,8 @@
             <div class="container">
                 <h1>Die Entwickler</h1>
                 <img class="circle responsive-img materialboxed" src="img/materialize_team.jpeg">
+                <img class="circle responsive-img materialboxed" src="img/materialize_team.jpeg">
+                <img class="circle responsive-img materialboxed" src="img/materialize_team.jpeg">
 
                 <div class="col s12"><blockquote>We are a team of students from Carnegie Mellon University.</blockquote></div>                
             </div>
@@ -326,7 +328,6 @@
         });
 
         $(".tabs-content").css('height', $("main").height() - 1);
-        $(".tabs-content").css('overflow', 'auto');
 
         // Custom INIT
         toggleContainer();
@@ -334,7 +335,7 @@
 
         // fix window rescaling bugs
         $(window).on('resize', function () {
-            $(".tabs-content").css('height', $("main").height());
+            $(".tabs-content").css('height', $("main").height() - 1);
             setTimeout(function () {
                 M.Tabs.getInstance($(".tabs")).updateTabIndicator();
             }, 1000);
@@ -344,6 +345,10 @@
         var counter = 1;    // default page
         const max = 8;      // last page
         const min = 1;      // first page
+
+        for (let index = counter; index <= max; index++) {
+            $("#page" + index).css('overflow', 'auto');
+        }
 
         M.Tabs.getInstance($(".tabs")).select("page" + counter);
 
