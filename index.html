@@ -318,6 +318,13 @@
             swipeable: true
         });
 
+        $(document).ready(function(){
+            $('.slider').slider({
+                duration: 400,
+                interval: 2000,
+            });
+        });
+
         $(".tabs-content").css('height', $("main").height() - 1);
 
         // Custom INIT
