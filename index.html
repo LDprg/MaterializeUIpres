@@ -555,6 +555,7 @@
         M.Tabs.getInstance($(".tabs")).select("page" + counter);
 
         $(document).keydown(function (e) {
+            var olcnt=counter;
             switch (e.which) {
                 //case 32: // space key
                 case 38: // up arrow key
@@ -573,7 +574,7 @@
             if (counter > max) counter = max;
             if (counter < min) counter = min;
 
-            M.Tabs.getInstance($(".tabs")).select("page" + counter);
+            if (oldcnt != counter) M.Tabs.getInstance($(".tabs")).select("page" + counter);
         });
     </script>
     <script src="prism.js"></script>
